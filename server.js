@@ -1,6 +1,6 @@
 const cp = require('child_process');
 const express = require('express');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -29,5 +29,5 @@ app.get('/test', function (req, res) {
 });
 
 app.listen(port, function () {
-	console.log('App is listening on port 3000!');
+	console.log('App is listening on port ' + port + '!');
 });
